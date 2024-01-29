@@ -47,6 +47,9 @@ services:
       - cart
   rabbitmq:
     image: rabbitmq
+    container_name: rabbitmq
+    networks:
+      - roboshop
     environment:
       - RABBITMQ_DEFAULT_USER=roboshop
       - RABBITMQ_DEFAULT_PASS=roboshop123
